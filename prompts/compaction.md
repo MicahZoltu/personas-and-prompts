@@ -24,3 +24,37 @@ DISCARD:
 Write as direct factual statements. Not a narrative. Not a history. Not a response to the user. The settled, conflict-free record of what is true now.
 
 Do not respond to any questions in the conversation. Only output the document.
+
+Structure it under these headings. Omit any heading with no content.
+---
+## Objective
+
+What you are working on right now. The immediate next action — what you would do if you had one more turn. What is currently broken or blocking progress.
+
+## User Directives
+
+Every correction, preference, and rule the user stated. These accumulate across compaction cycles — carry forward all directives from prior summaries. Never drop one.
+
+## Plan
+
+Remaining steps in order. Reference spec or plan documents by path. Enough detail to pick up mid-step.
+
+## Failed Approaches
+
+Everything that was tried and did not work. Number each one. What was attempted, what went wrong, why. Include approaches the user rejected. Be exhaustive — this is the highest-value section.
+
+## Resolved Code & Discoveries
+
+Working code preserved verbatim in fenced blocks — query patterns, state machines, auth flows, data transforms, correct field names, API response shapes. Error workarounds, environment-specific behaviors, API quirks, correct syntax that differs from what you would guess. These are gotchas that would be painful to rediscover. If you struggled to get something working, the resolved version belongs here.
+
+## How Things Work Now
+
+The settled state of the system. Architecture, commands, patterns in place. State as direct instructions: "use X", "run Y", "the script lives at Z". Not a history of decisions.
+
+## Accomplished
+
+What is complete. What is in progress. What remains. Commit SHAs where relevant.
+
+## Relevant files / environment
+
+Files that matter — with modification status (committed, uncommitted, pending). Credentials, API keys, auth tokens, endpoint URLs, environment variables, service ports. Multiple credential locations that must stay in sync — list all of them.
